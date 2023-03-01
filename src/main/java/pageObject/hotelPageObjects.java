@@ -33,7 +33,7 @@ public class hotelPageObjects {
 		this.driver = driver;
 	}
 
-	String country ="India",city="Mumbai",hotel="Santacruz",type1="Luxury",type2="King",type3="Pool";
+	String country ="India",city="Mumbai",hotel="Santacruz",type1="Club",type2="King",type3="City";
 	
 	By select_Country = By.xpath("//h4[text()='India']/preceding-sibling::input");
 	By check_In_Date = By.xpath("//div[contains(text(),'Check-in')]/following-sibling::h4");
