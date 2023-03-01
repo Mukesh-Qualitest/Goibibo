@@ -33,7 +33,7 @@ public class hotelPageObjects {
 		this.driver = driver;
 	}
 
-	String country ="India",city="Mumbai",hotel="Santacruz",type="Luxury";
+	String country ="India",city="Mumbai",hotel="Santacruz",type1="Luxury",type2="King",type3="Pool";
 	
 	By select_Country = By.xpath("//h4[text()='India']/preceding-sibling::input");
 	By check_In_Date = By.xpath("//div[contains(text(),'Check-in')]/following-sibling::h4");
@@ -44,7 +44,7 @@ public class hotelPageObjects {
 	By hotel_Options = By.xpath("//h4[contains(text(),'"+hotel+"')]/ancestor::div[contains(@class,'geKxaL')]");
 	By view_Room_Options = By.xpath("//span[contains(text(),'VIEW')]/ancestor::button");
 	By select_Room_Button = By
-			.xpath("//p[contains(text(),'"+type+"')]/ancestor::div[contains(@class,'gaTtbL')]//button");
+			.xpath("//h3[contains(text(),'"+type1+"') and contains(text(),'"+type2+"') and contains(text(),'"+type3+"')]/ancestor::div[contains(@class,'ZTwTx')]/descendant::button[1]");
 	By title_Selection = By.xpath("//select[contains(@class,'hkMeMW')]");
 	By enter_First_Name = By.xpath("//input[contains(@class,'hEgRgJ')][@placeholder='Enter First Name']");
 	By enter_Last_Name = By.xpath("//input[contains(@class,'hEgRgJ')][@placeholder='Enter Last Name']");
@@ -62,6 +62,8 @@ public class hotelPageObjects {
 		getFutureDate(20);
 		driver.findElement(select_Country).click();
 		driver.findElement(landmark_Input).click();
+		WebElement wt = (WebElement) (new WebDriverWait(driver, Duration.ofSeconds(30)))
+				.until(ExpectedConditions.presenceOfElementLocated(trending_City_List));
 		driver.findElement(trending_City_List).click();
 	}
 	
