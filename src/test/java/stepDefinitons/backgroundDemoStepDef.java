@@ -105,7 +105,7 @@ public class backgroundDemoStepDef extends baseClass {
 	}
 
 	@When("User should be in flight result page")
-	public void user_should_be_in_flight_result_page(Scenario scenario) {
+	public void user_should_be_in_flight_result_page() {
 		flight.flightResultAssert();
 		closeBrowser();
 	}

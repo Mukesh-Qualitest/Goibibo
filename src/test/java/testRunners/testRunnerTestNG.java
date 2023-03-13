@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = {"src\\test\\features\\feature\\backgroundDemo.feature"}, 
 				glue = {"stepDefinitons"},
-				tags = "@Hotel", 
+				tags = "@Flight_oneWay", 
 				plugin = {"pretty", "io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm","json:target/cucumber.json " },
 				monochrome = true)
 public class testRunnerTestNG extends AbstractTestNGCucumberTests{

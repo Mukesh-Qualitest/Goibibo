@@ -31,10 +31,10 @@ public class orangeHRMPageObjects {
 	By passwordInput = By.xpath("//input[@name='password']");
 	By loginButton = By.xpath("//button[text()=' Login ']");
 	By dropClick = By.xpath("//li[contains(@class,'userdropdown')]");
-	By aboutClick = By.xpath("//a[text()='About']");
+	By aboutClick = By.xpath("//a[text()='Über']");
 	By companyText = By.xpath("//p[text()='OrangeHRM']");
 	By closeButton = By.xpath("//button[contains(@class,'oxd-dialog-close-button')]");
-	By logoutButton = By.xpath("//a[text()='Logout']");
+	By logoutButton = By.xpath("//a[text()='Abmelden']");
 
 	public void enterUserName() {
 		WebElement wait = (WebElement) (new WebDriverWait(driver, Duration.ofSeconds(30)))
